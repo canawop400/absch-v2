@@ -1,0 +1,262 @@
+/*
+Color palette
+
+Green       : #8AFF80
+Soft orange : #FFCA80
+Pink        : #FF80BF
+Purple      : #9580FF
+Orange      : #FF9580
+Yellow      : #FFFF80
+Black       : #15171B
+Gray        : #1D1E26
+*/
+
+
+
+* {
+	margin: 0px;
+	padding: 0px;
+
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Consolas, monaco, monospace;
+	font-size: 16px;
+	color: white;
+}
+
+a {
+	text-decoration: none;
+}
+
+#main-container {
+	display: flex;
+}
+
+/* Navbar */
+
+#navbar {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-around;
+	align-items: center;
+
+	background-color: #15171B;
+
+	width: 10vw;
+	height: 100vh;
+}
+
+#site-logo {
+	margin-top: 0.650rem;
+	width: 8rem;
+}
+
+.icon {
+	width: 3rem;
+}
+
+#navbar-icons {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-around;
+	align-items: center;
+	gap: 4rem;
+
+	border-top: 0.3rem solid #9580FF;
+	border-bottom: 0.3rem solid #9580FF;
+	padding: 2.8rem;
+	width: 50%;
+
+}
+
+/* Page content */
+
+main {
+	background-color: #1D1E26;
+
+	width: 90vw;
+}
+
+#page-title {
+	height: 13vh;
+	padding: 1.5rem;
+	text-align: center;
+}
+
+.page-content {
+	height: 87vh;
+}
+
+.title-decorator {
+	display: inline-block;
+
+	width: 0.7rem;
+	height: 0.7rem;
+
+	background-color: #8AFF80;
+	border-radius: 0.7rem;
+}
+
+
+
+
+		/* INDIVIDUAL PAGE STYLES */
+
+
+
+	/* news.html */
+
+#news-wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	justify-items: center;
+
+	overflow-y: auto;
+
+	gap: 1rem;
+
+	/*padding: 2rem;*/
+	height: 100%;
+}
+
+.new {
+	display: flex;
+	flex-direction: column;
+
+	width: 23rem;
+	height: 32rem;
+
+	border-radius: 1rem;
+	background-color: #15171B;
+}
+
+.new-image {
+	height: 15rem;
+	width: 100%;
+
+	border-radius: 1rem;
+}
+
+.new-text-container {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-evenly;
+
+	gap: 1rem;
+
+	height: 17rem;
+
+	text-align: center;
+}
+
+#new-management {
+	position: absolute;
+
+	top: 1rem;
+	right: 2rem;
+
+	height: 10vh;
+
+	display: flex;
+	gap: 1rem;
+}
+
+.new-management-icon {
+	cursor: pointer;
+
+	width: 3rem;
+	height: 3rem;
+}
+
+
+
+
+	/* create_new.html */
+
+#create-new-container {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: center;
+	align-items: center;
+}
+
+#create-new-form {
+	display: flex;
+	flex-direction: column;
+
+	justify-content: space-around;
+	align-items: center;
+
+	width: 40rem;
+	height: 35rem;
+
+	border-radius: 3%;
+	background-color: #15171B;
+}
+
+.create-new-label {
+	display: flex;
+	flex-direction: column;
+
+	gap: 0.5rem;
+
+	text-align: center;
+	font-size: 25px;
+}
+
+.create-new-input {
+	width: 25rem;
+
+	text-align: center;
+
+	color: white;
+
+	background-color: #1D1E26;
+	border: 0.1em solid #9580FF;
+	border-radius: 1rem;
+}
+
+#create-new-content-input {
+	height: 19rem;
+}
+
+#create-new-buttons {
+	display: flex;
+
+	gap: 1.5rem;
+}
+
+.create-new-button {
+	cursor: pointer;
+
+	padding: 0.5rem;
+}
+
+
+.green-button {
+	color: #8AFF80;
+	border: 1px solid #8AFF80;
+}
+
+.green-button:hover {
+	color: black;
+	background-color: #8AFF80;
+	box-shadow: 0 0 0.2rem #8AFF80;
+}
+
+.red-button {
+	color: #FF9580;
+	border: 1px solid #FF9580;
+}
+
+.red-button:hover {
+	color: black;
+	background-color: #FF9580;
+	box-shadow: 0 0 0.2rem #FF9580;
+}

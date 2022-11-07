@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="/static/styles/styles.css">
+
+		<title>ABSCH - Crear noticia</title>
+	</head>
+
+	<body>
+
+		<div id="main-container">
+			<nav id="navbar">
+				<a href="/">
+					<img src="/static/images/logo.png" alt="logo" id="site-logo">
+				</a>
+
+				<div id="navbar-icons">
+					<a href="/" class="icon">
+						<img src="/static/images/home.png" alt="home-icon" class="icon">
+					</a>
+
+					<a href="/tramites/" class="icon">
+						<img src="/static/images/procedures.png" alt="procedures-icon" class="icon">
+					</a>
+
+					<a href="/noticias/" class="icon">
+						<img src="/static/images/news.png" alt="news-icon" class="icon">
+					</a>
+				</div>
+
+				<a href="/contacto/" contact="icon">
+					<img src="/static/images/contact.png" alt="contact-icon" class="icon">
+				</a>
+			</nav>
+
+			<main>
+				<header>
+					<h1 id="page-title">
+						<span class="title-decorator"></span>
+						Crear noticia
+						<span class="title-decorator"></span>
+					</h1>
+				</header>
+
+				<section class="page-content" id="create-new-container">
+					<form action="/api/news/" method="POST" id="create-new-form" autocomplete="off">
+						<label class="create-new-label">
+							<p>Titulo</p>
+							<input type="text" name="title" class="create-new-input" id="create-new-title-input">
+						</label>
+
+						<label class="create-new-label">
+							<p>Contenido</p>
+							<input type="text" name="content" class="create-new-input" id="create-new-content-input">
+						</label>
+
+						<div id="create-new-buttons">
+							<a  href="/noticias/" class="create-new-button red-button" id="create-new-cancel-button">Cancelar</a>	
+
+							<div type="submit" class="create-new-button green-button" id="create-new-submit">
+								Enviar
+							</div>
+
+						</div>
+					</form>
+				</section>
+			</main>
+		</div>
+		
+		<script src="/static/scripts/script.js"></script>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link type="text/css" rel="stylesheet" href="./../static/styles/styles.css">
+
+		<title>ABSCH - Noticias</title>
+	</head>
+
+	<body>
+
+		<div id="main-container">
+			<nav id="navbar">
+				<a href="/">
+					<img src="/static/images/logo.png" alt="logo" id="site-logo">
+				</a>
+
+				<div id="navbar-icons">
+					<a href="/" class="icon">
+						<img src="/static/images/home.png" alt="home-icon" class="icon">
+					</a>
+
+					<a href="/tramites/" class="icon">
+						<img src="/static/images/procedures.png" alt="procedures-icon" class="icon">
+					</a>
+
+					<a href="/noticias/" class="icon">
+						<img src="/static/images/news.png" alt="news-icon" class="icon">
+					</a>
+				</div>
+
+				<a href="/contacto/" contact="icon">
+					<img src="/static/images/contact.png" alt="contact-icon" class="icon">
+				</a>
+			</nav>
+
+			<main>
+				<header>
+					<h1 id="page-title">
+						<span class="title-decorator"></span>
+						Pagina de noticias
+						<span class="title-decorator"></span>
+					</h1>
+				</header>
+
+
+				<div id="new-management">
+					<div id="create-new-button">
+						<a href="/noticias/crear">
+							<img src="/static/images/add.png" alt="add-new-icon" class="new-management-icon">
+						</a>
+					</div>
+
+					<div id="edit-new-button">
+						<img src="/static/images/edit.png" alt="edit-new-icon" class="new-management-icon">
+					</div>
+
+					<div id="delete-new-button">
+						<img src="/static/images/remove.png" alt="remove-new-icon" class="new-management-icon">
+					</div>
+				</div>
+
+				<section class="page-content">
+					<div id="news-wrapper">
+						{% for new in news %}
+							<div class="new">
+								<div class="new-image"></div>
+							
+								<div class="new-text-container">
+									<div class="new-title">
+										<h3>{{ new["title"] }}</h3>
+										<span class="new-date">{{ new["created" ]}}</span>
+									</div>
+
+									<div class="new-text">
+										<p>{{ new["content"] }}</p>
+									</div>
+								</div>
+							</div>
+						{% endfor %}
+					</div>
+				</section>
+			</main>
+		</div>
+		
+		<script src="/static/scripts/script.js"></script>
+	</body>
+</html>
