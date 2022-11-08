@@ -1,6 +1,6 @@
 rm -rfv *
 
-git clone https://github.com/canawop400/absch-v2/
+git clone https://github.com/canawop400/absch/
 
-cp -r absch-v2/* .
-rm -rfv absch-v2/
+cp -r absch/* .
+rm -rfv absch/

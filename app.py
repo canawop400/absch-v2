@@ -51,7 +51,10 @@ def get_db():
 
 # API
 
-@app.post("/api/news/")
+# TODO: REFACTORIZAR ESTO
+
+
+@app.post("/api/news/create/")
 def post_news():
 
 	title = request.form["title"]
@@ -64,6 +67,25 @@ def post_news():
 	# See: https://owasp.org/www-community/attacks/SQL_Injection
 	conn = get_db()
 	conn.execute(f"INSERT INTO news (title, content) VALUES ('{title}', '{content}');")
+	conn.commit()
+	conn.close()
+
+	return ({"mensaje": "La noticia se creo correctamente"}, 200)
+
+
+@app.post("/api/news/delete/")
+def delete_new():
+
+	title = request.form["title"]
+	content = request.form["content"]
+
+	if title == "" or content == "":
+		return ({"error": "Ninguno de los campos puede estar vacio"}, 400)
+	
+	# WARNING: This is vulnerable to Sql Injection
+	# See: https://owasp.org/www-community/attacks/SQL_Injection
+	conn = get_db()
+	conn.execute(f"DELETE FROM news WHERE title = '{title}' and content = '{content}' limit 1;")
 	conn.commit()
 	conn.close()
 
